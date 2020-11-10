@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Forecast from "./components/Forecast";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Container>
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} exact />
+          <Route path="/forecast" component={Forecast} exact />
         </Container>
       </main>
       <Footer />
