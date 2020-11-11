@@ -6,7 +6,16 @@ const Footer = () => {
     <footer>
       <Container>
         <Row>
-          <Col className="text-center py-3">Created By: Nicholas McCooey</Col>
+          <Col className="text-center py-3">
+            <a
+              className="github-link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/nmccooey"
+            >
+              Created By: Nicholas McCooey <i class="fab fa-github"></i>
+            </a>
+          </Col>
         </Row>
       </Container>
     </footer>

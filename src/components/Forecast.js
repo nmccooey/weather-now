@@ -11,9 +11,13 @@ const Home = () => {
         </Container>
       </Jumbotron>
       <Container>
-        <CardGroup>
+        <CardGroup className="py-4">
           <Card>
-            <Card.Img variant="top" src="img/mostly-cloudy.png" />
+            <Card.Img
+              className="p-4"
+              variant="top"
+              src="img/mostly-cloudy.png"
+            />
             <Card.Body>
               <Card.Title>Monday</Card.Title>
               <Card.Text>Mostly Cloudy</Card.Text>
@@ -28,7 +32,11 @@ const Home = () => {
             </Card.Footer>
           </Card>
           <Card>
-            <Card.Img variant="top" src="img/mostly-cloudy.png" />
+            <Card.Img
+              className="p-4"
+              variant="top"
+              src="img/mostly-cloudy.png"
+            />
             <Card.Body>
               <Card.Title>Tuesday</Card.Title>
               <Card.Text>Mostly Cloudy.</Card.Text>
@@ -43,7 +51,11 @@ const Home = () => {
             </Card.Footer>
           </Card>
           <Card>
-            <Card.Img variant="top" src="img/mostly-cloudy.png" />
+            <Card.Img
+              className="p-4"
+              variant="top"
+              src="img/mostly-cloudy.png"
+            />
             <Card.Body>
               <Card.Title>Wednesday</Card.Title>
               <Card.Text>Mostly Cloudy</Card.Text>
