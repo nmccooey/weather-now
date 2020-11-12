@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron, Container, Card, CardGroup } from "react-bootstrap";
+import { Jumbotron, Container, Card, CardDeck } from "react-bootstrap";
 
 const Home = () => {
   return (
@@ -10,8 +10,10 @@ const Home = () => {
           <p>Showing current weather conditions wherever you are.</p>
         </Container>
       </Jumbotron>
-      <Container>
-        <CardGroup className="py-4">
+      <Container className="d-flex flex-column align-items-center">
+        <h2>Location:</h2>
+        <input className="mx-2" placeholder="Boston, MA"></input>
+        <CardDeck className="py-4">
           <Card>
             <Card.Img
               className="p-4"
@@ -69,7 +71,7 @@ const Home = () => {
               <small className="text-muted">Last updated 3 mins ago</small>
             </Card.Footer>
           </Card>
-        </CardGroup>
+        </CardDeck>
       </Container>
     </>
   );
