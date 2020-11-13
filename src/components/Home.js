@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Jumbotron, Container } from "react-bootstrap";
 import CurrentWeather from "./CurrentWeather";
 
 const Home = () => {
+  const [location, setLocation] = useState({
+    lat: null,
+    long: null,
+  });
+
+  useEffect(() => {
+    // Update user location using location services.
+    window.navigator.geolocation.getCurrentPosition((position) =>
+      setLocation({
+        lat: position.coords.latitude,
+        long: position.coords.longitude,
+      })
+    );
+  }, [location]);
+
+  console.log(location);
+
   return (
     <>
       <Jumbotron className="mt-4">
