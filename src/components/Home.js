@@ -10,12 +10,14 @@ const Home = () => {
 
   useEffect(() => {
     // Update user location using location services.
-    window.navigator.geolocation.getCurrentPosition((position) =>
-      setLocation({
-        lat: position.coords.latitude,
-        long: position.coords.longitude,
-      })
-    );
+    if (location.lat || location.long === null) {
+      window.navigator.geolocation.getCurrentPosition((position) =>
+        setLocation(
+          ((location.lat = position.coords.latitude),
+          (location.long = position.coords.longitude))
+        )
+      );
+    }
   }, [location]);
 
   console.log(location);
